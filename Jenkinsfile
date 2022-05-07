@@ -35,10 +35,7 @@ pipeline {
         }
         stage('codecoverage') {
 
-           tools {
-              jdk 'java1.8'
-           }
-	         steps {
+                 steps {
                 // step4
                 echo 'codecoverage..'
 		            sh script: '/opt/maven/bin/mvn cobertura:cobertura -Dcobertura.report.format=xml'
